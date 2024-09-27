@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
         flex-direction: column;
         width: 100%;
         min-height: 100vh;
-        background-color: #2C2D34;
+        background: linear-gradient(180deg, #000000 0%, #171717 60%);
         
         @media (max-width: 1024px) {
             width: 100%;

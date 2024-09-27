@@ -7,8 +7,8 @@ import {
   FaHome,
   FaInfoCircle,
   FaTools,
-  FaBoxOpen,
   FaLinkedin,
+  FaFolder,
 } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import { IoMdContact } from "react-icons/io";
@@ -48,28 +48,28 @@ const Header = () => {
             className={activeItem === "/" ? "active" : ""}
             onClick={() => handleItemClick("/")}
           >
-            <FaHome />
+            <FaHome className={activeItem === "/" ? "active" : ""}/>
             <Link to="/">Home</Link>
           </li>
           <li
             className={activeItem === "/servicos" ? "active" : ""}
             onClick={() => handleItemClick("/servicos")}
           >
-            <FaTools />
+            <FaTools className={activeItem === "/" ? "active" : ""}/>
             <Link to="/serviços">Serviços</Link>
           </li>
           <li
             className={activeItem === "/portfolio" ? "active" : ""}
             onClick={() => handleItemClick("/portfolio")}
           >
-            <FaBoxOpen />
-            <Link to="/portfolio">Portfolio</Link>
+            <FaFolder className={activeItem === "/" ? "active" : ""}/>
+            <Link to="/portfolio">Portfólio</Link>
           </li>
           <li
             className={activeItem === "/sobre" ? "active" : ""}
             onClick={() => handleItemClick("/sobre")}
           >
-            <FaInfoCircle />
+            <FaInfoCircle className={activeItem === "/" ? "active" : ""}/>
             <Link to="/sobre">Sobre Nós</Link>
           </li>
           <li
@@ -77,12 +77,12 @@ const Header = () => {
             onClick={() => handleItemClick("/contato")}
           >
             <Link to="/contato">
-              <IoMdContact />
+              <IoMdContact className={activeItem === "/" ? "active" : ""}/>
               Contato
             </Link>
           </li>
         </ul>
-        <Link to="/">
+        <Link to="/" id="boxImgLogo">
           <img src={LogoHeader} alt="logo" id="logo-menu-mobile" />
         </Link>
         <C.BoxSocialIconsMobile>

@@ -5,7 +5,8 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 50px;
+  padding-bottom: 10px;
   z-index: 10;
 `;
 
@@ -16,7 +17,7 @@ export const Content = styled.div`
   align-items: center;
   gap: 10px;
   width: 100%;
-  height: 50px;
+  height: 100%;
 
   p {
     font-style: normal;

@@ -85,13 +85,13 @@ export const MobileMenu = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   width: 60%;
   height: 100%;
   top: 0px;
   left: 0;
   padding: 0 20px;
-  background-color: #4f5050;
+  background: linear-gradient(180deg, #000000 0%, #171717 60%);
   z-index: 10000;
 
   ul {
@@ -126,26 +126,23 @@ export const MobileMenu = styled.div`
         font-size: 20px;
       }
 
-      .btn-contact {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 45px;
-        border: 2px solid #f5d02b;
-        border-radius: 15px;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: bold;
-        color: #f5d02b;
-        cursor: pointer;
-      }
-
       &.active {
+        svg {
+          transition: fill 0.3s ease;
+          fill: url(#gradient);
+        }
         a {
           position: relative;
           width: auto;
-          color: #f5d02b;
+          background: linear-gradient(
+            270deg,
+            #043b8f 0%,
+            #0074ff 51%,
+            #043b8f 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
 
           &::after {
             position: absolute;
@@ -154,7 +151,12 @@ export const MobileMenu = styled.div`
             bottom: -5px;
             left: 0;
             content: " ";
-            background-color: #f5d02b;
+            background: linear-gradient(
+              270deg,
+              #043b8f 0%,
+              #0074ff 51%,
+              #043b8f 100%
+            );
             transition: 0.5s ease-in-out;
           }
         }
@@ -162,8 +164,18 @@ export const MobileMenu = styled.div`
     }
   }
 
-  img#logo-menu-mobile {
+  a#boxImgLogo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     width: 100%;
+    min-height: 200px;
+    margin-bottom: -30px;
+  }
+
+  img#logo-menu-mobile {
+    width: 150px;
+    height: 150px;
   }
 `;
 
@@ -172,7 +184,7 @@ export const ImgBox = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: 20px;
+  padding-top: 50px;
 
   img#logo {
     width: 120px;
